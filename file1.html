@@ -1,1 +1,47 @@
-jds
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Management System</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Register Section -->
+    <div class="container" id="registerSection">
+        <h2>Create Account</h2>
+        <input type="text" id="regName" placeholder="Enter Name">
+        <input type="password" id="regPass" placeholder="Enter Password">
+        <button onclick="register()">Register</button>
+        <p>Already have account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- Login Section -->
+    <div class="container hidden" id="loginSection">
+        <h2>Login</h2>
+        <input type="text" id="loginName" placeholder="Enter Name">
+        <input type="password" id="loginPass" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p>No account? <a href="#" onclick="showRegister()">Register</a></p>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div class="container hidden" id="dashboard">
+        <h2>Bank Dashboard</h2>
+        <p class="balance">Balance: ₹<span id="balance">0</span></p>
+
+        <input type="number" id="amount" placeholder="Enter Amount">
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+
+        <h3>Transaction History</h3>
+        <div id="transactions"></div>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
